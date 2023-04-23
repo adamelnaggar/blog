@@ -1,3 +1,28 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://adamelnaggar.github.io/blog/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Adam El's Blog"
+theme = "yinyang"
+
+[params]
+  author = "Adam El-Naggar"
+  description = "Occasional articles about my experience growing my small business and building online side projects."
+
+  [[params.social]]
+    icon = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/adamelng"
+
+  [[params.social]]
+    icon = "linkedin"
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/adamelnaggar/"
+
+  [[params.social]]
+    icon = "instagram"
+    name = "Instagram"
+    url = "https://www.instagram.com/adam.elng/"
+
+  [[params.social]]
+    icon = "github"
+    name = "GitHub"
+    url = "https://github.com/adamelnaggar/"

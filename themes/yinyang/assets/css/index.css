@@ -1,7 +1,7 @@
 /* global */
 
 body {
-  font-family: "Bree Serif", sans-serif;
+  font-family: "Inconsolata", monospace;
   -webkit-font-smoothing: antialiased;
   margin: 0 20px;
 }
@@ -81,7 +81,7 @@ a:hover {
   font-size: 2rem;
   font-weight: bold;
   margin-top: 32px;
-  font-family: "Bungee Shade", sans-serif;
+  font-family: "Sigmar", sans-serif;
 }
 .header-title a {
   text-decoration: none;

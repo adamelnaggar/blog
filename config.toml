@@ -11,7 +11,7 @@ homepage = "https://adamelnaggar.com"
   description = "Occasional articles about my experience growing my small business and building online side projects."
 headTitle = "Adam El's Blog"
 mainSections = ["posts"]
-extraHead = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sigmar"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata"><link rel="shortcut icon" type="image/png" href="/img/icon-192x192.png"><link rel="shortcut icon" sizes="192x192" href="/img/icon-192x192.png"><link rel="apple-touch-icon" href="/img/icon-192x192.png">'
+extraHead = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sigmar"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata"><link rel="shortcut icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" sizes="192x192" href="/img/favicon.png"><link rel="apple-touch-icon" href="/img/favicon.png">'
 
 [[params.socials]]
 name = "About Me"

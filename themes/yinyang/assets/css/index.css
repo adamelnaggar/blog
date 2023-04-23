@@ -4,6 +4,7 @@ body {
   font-family: "Inconsolata", monospace;
   -webkit-font-smoothing: antialiased;
   margin: 0 20px;
+  font-size: 20px;
 }
 
 article {
@@ -80,13 +81,10 @@ a:hover {
 .header-title {
   font-size: 2rem;
   margin-top: 32px;
-  font-family: "Sigmar", sans-serif;
+  font-weight:bold;
 }
 .header-title a {
   text-decoration: none;
-}
-.header-title a:hover {
-  font-weight:normal;
 }
 
 .header-subtitle {

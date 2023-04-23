@@ -1,4 +1,4 @@
-baseURL = 'http://blog.adamelnaggar.com'
+baseURL = 'http://blog.adamelnaggar.com/'
 languageCode = 'en-us'
 title = "Adam El's Blog"
 theme = "yinyang"

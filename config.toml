@@ -1,4 +1,4 @@
-baseURL = 'https://adamelnaggar.github.io/blog/'
+baseURL = 'http://blog.adamelnaggar.com'
 languageCode = 'en-us'
 title = "Adam El's Blog"
 theme = "yinyang"

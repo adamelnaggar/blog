@@ -11,6 +11,7 @@ homepage = "https://adamelnaggar.com"
   description = "Occasional articles about my experience growing my small business and building online side projects."
 headTitle = "Adam El's Blog"
 mainSections = ["posts"]
+extraHead = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sigmar"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata">'
 
 [[params.socials]]
 name = "About Me"

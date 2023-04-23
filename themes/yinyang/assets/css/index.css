@@ -79,12 +79,14 @@ a:hover {
 
 .header-title {
   font-size: 2rem;
-  font-weight: bold;
   margin-top: 32px;
   font-family: "Sigmar", sans-serif;
 }
 .header-title a {
   text-decoration: none;
+}
+.header-title a:hover {
+  font-weight:normal;
 }
 
 .header-subtitle {

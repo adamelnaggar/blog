@@ -3,26 +3,27 @@ languageCode = 'en-us'
 title = "Adam El's Blog"
 theme = "yinyang"
 
+[author]
+name = "Adam El-Naggar"
+homepage = "https://adamelnaggar.com"
+
 [params]
-  author = "Adam El-Naggar"
   description = "Occasional articles about my experience growing my small business and building online side projects."
+headTitle = "Adam El's Blog"
+mainSections = ["posts"]
 
-  [[params.social]]
-    icon = "twitter"
-    name = "Twitter"
-    url = "https://twitter.com/adamelng"
-
-  [[params.social]]
-    icon = "linkedin"
-    name = "LinkedIn"
-    url = "https://www.linkedin.com/in/adamelnaggar/"
-
-  [[params.social]]
-    icon = "instagram"
-    name = "Instagram"
-    url = "https://www.instagram.com/adam.elng/"
-
-  [[params.social]]
-    icon = "github"
-    name = "GitHub"
-    url = "https://github.com/adamelnaggar/"
+[[params.socials]]
+name = "About Me"
+link = "https://adamelnaggar.com"
+[[params.socials]]
+name = "Twitter"
+link = "https://twitter.com/adamelng/"
+[[params.socials]]
+name = "LinkedIn"
+link = "https://www.linkedin.com/in/adamelnaggar/"
+[[params.socials]]
+name = "Instagram"
+link = "https://www.instagram.com/adam.elng/"
+[[params.socials]]
+name = "GitHub"
+link = "https://github.com/adamelnaggar"

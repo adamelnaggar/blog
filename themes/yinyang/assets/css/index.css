@@ -291,7 +291,9 @@ a:hover {
     display: none;
   }
 }
-
+.header-item {
+  margin-right: 5px;
+}
 .header-item:after {
   content: '/';
 }

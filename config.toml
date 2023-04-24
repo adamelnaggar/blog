@@ -3,28 +3,32 @@ languageCode = 'en-us'
 title = "Adam El's Blog"
 theme = "yinyang"
 
+[permalinks]
+    categories =  "/:section/:slug"
+
 [author]
 name = "Adam El-Naggar"
 homepage = "https://adamelnaggar.com"
 
 [params]
-  description = "Occasional articles about my experience growing my small business and building online side projects."
+mainSections = ["articles", "projects"]
+homeSections = ["articles"]
 headTitle = "Adam El's Blog"
-mainSections = ["posts"]
+description = "Occasional articles about my experience growing my small business and building online side projects."
 extraHead = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sigmar"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inconsolata"><link rel="shortcut icon" type="image/png" href="/img/favicon.png"><link rel="shortcut icon" sizes="192x192" href="/img/favicon.png"><link rel="apple-touch-icon" href="/img/favicon.png">'
 
 [[params.socials]]
-name = "About Me"
+name = "About"
 link = "https://adamelnaggar.com"
 [[params.socials]]
-name = "Twitter"
-link = "https://twitter.com/adamelng/"
+name = "Articles"
+link = "/articles/"
 [[params.socials]]
-name = "LinkedIn"
-link = "https://www.linkedin.com/in/adamelnaggar/"
+name = "Podcasts"
+link = "/podcasts/"
 [[params.socials]]
-name = "Instagram"
-link = "https://www.instagram.com/adam.elng/"
+name = "Projects"
+link = "/projects/"
 [[params.socials]]
-name = "GitHub"
-link = "https://github.com/adamelnaggar"
+name = "Subscribe"
+link = "/"

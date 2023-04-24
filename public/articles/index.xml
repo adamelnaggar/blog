@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Articles on Adam El&#39;s Blog</title>
+    <link>http://blog.adamelnaggar.com/articles/</link>
+    <description>Recent content in Articles on Adam El&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Apr 2023 14:54:30 +0100</lastBuildDate><atom:link href="http://blog.adamelnaggar.com/articles/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Blog Post</title>
+      <link>http://blog.adamelnaggar.com/articles/new-blog-post/</link>
+      <pubDate>Sun, 23 Apr 2023 14:54:30 +0100</pubDate>
+      
+      <guid>http://blog.adamelnaggar.com/articles/new-blog-post/</guid>
+      <description>Trying things out. Testing things.
+Hello asgasg s adghasdh </description>
+    </item>
+    
+    <item>
+      <title>A second trial post</title>
+      <link>http://blog.adamelnaggar.com/articles/new-blog-post-copy/</link>
+      <pubDate>Sat, 22 Apr 2023 14:54:30 +0100</pubDate>
+      
+      <guid>http://blog.adamelnaggar.com/articles/new-blog-post-copy/</guid>
+      <description>Trying things out. Testing things some more
+Hello asgasg s adghasdh </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,9 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Adam El&#39;s Blog</title>
-    <link>https://adamelnaggar.github.io/blog/categories/</link>
+    <link>http://blog.adamelnaggar.com/categories/</link>
     <description>Recent content in Categories on Adam El&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://adamelnaggar.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Apr 2023 14:54:30 +0100</lastBuildDate><atom:link href="http://blog.adamelnaggar.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Development</title>
+      <link>http://blog.adamelnaggar.com/categories/development/</link>
+      <pubDate>Sat, 22 Apr 2023 14:54:30 +0100</pubDate>
+      
+      <guid>http://blog.adamelnaggar.com/categories/development/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

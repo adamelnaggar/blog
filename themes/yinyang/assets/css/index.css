@@ -292,7 +292,7 @@ a:hover {
   }
 }
 .header-item:after {
-  content: '&nbsp; /';
+  content: '\00A0 /';
 }
 .header-item:last-child:after {
   content: none;

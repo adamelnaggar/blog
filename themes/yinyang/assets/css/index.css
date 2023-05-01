@@ -291,11 +291,8 @@ a:hover {
     display: none;
   }
 }
-.header-item {
-  margin-right: 5px;
-}
 .header-item:after {
-  content: '/';
+  content: '&nbsp; /';
 }
 .header-item:last-child:after {
   content: none;

@@ -9,7 +9,7 @@
         {{ partial "header.html" . }}
         <h1 class="post-title">{{ .Title }}</h1>
         <div id="posts-list">
-          {{ range (where site.RegularPages "Type" "in" site.Params.homeSections).GroupByDate "2006" -}}
+          {{ range (where site.RegularPages "Type" "in" site.Params.mainSections).GroupByDate "2006" -}}
           <section>
             <h1 class="site-date-catalog">{{ .Key }}</h1>
 

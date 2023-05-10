@@ -1,3 +1,5 @@
+<!-- 
+
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
 {{ partial "head.html" . }}
@@ -47,3 +49,206 @@
 </body>
 
 </html>
+ -->
+<!-- DEVELOPMENT WORKS WITH THIS
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
+{{ partial "head.html" . }}
+
+<body>
+  <article class="posts">
+    <div class="row">
+      <div class="col-xs-12">
+        {{ partial "header.html" . }}
+        <h1 class="post-title">{{ .Title }}</h1>
+        <div id="posts-list">
+          {{ if in (slice "articles" "projects") .Title }}
+            {{ $section := .Title }}
+            {{ range where (where site.RegularPages "Type" "in" (slice $section)) "Params.categories" "intersect" .Params.categories }}
+              <div class="row posts-line">
+                <div class="posts-date col-xs-3 col-sm-2">
+                  <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02"}}</time>
+                </div>
+                <div class="posts-title col-xs-9 col-sm-10">
+                  <div class="row">
+                    <div class="col-xs-11 col-sm-10">
+                      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </div>
+                    <div class="col-xs-1 col-sm-2 posts-categories">
+                      {{ range .Params.categories }}
+                        <div class="posts-category">
+                          <a href="/categories/{{ lower . }}/"><strong>{{ . }}</strong></a>
+                        </div>
+                      {{ end }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          {{ else }}
+            {{ $category := .Title }}
+            {{ range where (where site.RegularPages "Type" "in" (slice "articles" "projects")) "Params.categories" "intersect" (slice $category) }}
+              <div class="row posts-line">
+                <div class="posts-date col-xs-3 col-sm-2">
+                  <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02"}}</time>
+                </div>
+                <div class="posts-title col-xs-9 col-sm-10">
+                  <div class="row">
+                    <div class="col-xs-11 col-sm-10">
+                      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    </div>
+                    <div class="col-xs-1 col-sm-2 posts-categories">
+                      {{ range .Params.categories }}
+                        <div class="posts-category">
+                          <a href="/categories/{{ lower . }}/"><strong>{{ . }}</strong></a>
+                        </div>
+                      {{ end }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+  </article>
+
+  {{ partial "scripts.html" . }}
+</body>
+
+</html> -->
+
+<!-- CATEGORIES WORKS WITH BELOW -->
+<!-- <!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
+{{ partial "head.html" . }}
+
+<body>
+  <article class="posts">
+    <div class="row">
+      <div class="col-xs-12">
+        {{ partial "header.html" . }}
+        <h1 class="post-title">{{ .Title }}</h1>
+        <div id="posts-list">
+          {{ $section := .Title }}
+          {{ $category := .Title }}
+          {{ if or $section $category }}
+            {{ $pages := .Site.RegularPages }}
+            {{ $content := where $pages "Type" "in" $.Site.Params.mainSections }}
+            {{ if $category }}
+              {{ $content = where $content "Params.categories" "intersect" (slice $category) }}
+            {{ else }}
+              {{ $content = where $content "Section" $section }}
+            {{ end }}
+            {{ range $content.GroupByDate "2006" }}
+              <section>
+                <h1 class="site-date-catalog">{{ .Key }}</h1>
+                {{ range .Pages }}
+                  <div class="row posts-line">
+                    <div class="posts-date col-xs-3 col-sm-2">
+                      <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02"}}</time>
+                    </div>
+                    <div class="posts-title col-xs-9 col-sm-10">
+                      <div class="row">
+                        <div class="col-xs-11 col-sm-10">
+                          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </div>
+                        <div class="col-xs-1 col-sm-2 posts-categories">
+                          {{ range .Params.categories }}
+                            <div class="posts-category">
+                              <a href="/categories/{{ lower . }}/"><strong>{{ . }}</strong></a>
+                            </div>
+                          {{ end }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {{ end }}
+              </section>
+            {{ end }}
+          {{ end }}
+        </div>
+
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+  </article>
+
+  {{ partial "scripts.html" . }}
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
+{{ partial "head.html" . }}
+
+<body>
+  <article class="posts">
+    <div class="row">
+      <div class="col-xs-12">
+        {{ partial "header.html" . }}
+        <h1 class="post-title">{{ .Title }}</h1>
+        <div id="posts-list">
+{{ if (in .Permalink "/categories/") }}
+  {{ $category := .Title }}
+{{ else }}
+  {{ $section := .Title }}
+{{ end }}
+
+{{ $pages := .Site.RegularPages }}
+{{ $content := $pages }}
+
+{{ if or $section $category }}
+  {{ $content = where $pages "Type" "in" $.Site.Params.mainSections }}
+{{ end }}
+
+{{ if (in .Permalink "/categories/") }}
+  {{ $content = where $content "Params.categories" "intersect" (slice $category) }}
+{{ else }}
+  {{ $content = where $content "Type" "in" $.Site.Params.mainSections }}
+{{ end }}
+
+{{ range $content.GroupByDate "2006" }}
+  <!-- Rest of your code -->
+{{ end }}
+
+              <section>
+               
+                {{ range .Pages }}
+                  <div class="row posts-line">
+                    <div class="posts-date col-xs-3 col-sm-2">
+                      <time datetime="{{ .Date.Format "2006-01-02 15:04:05 MST" }}">{{ .Date.Format "Jan 02"}}</time>
+                    </div>
+                    <div class="posts-title col-xs-9 col-sm-10">
+                      <div class="row">
+                        <div class="col-xs-11 col-sm-10">
+                          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                        </div>
+                        <div class="col-xs-1 col-sm-2 posts-categories">
+                          {{ range .Params.categories }}
+                            <div class="posts-category">
+                              <a href="/categories/{{ lower . }}/"><strong>{{ . }}</strong></a>
+                            </div>
+                          {{ end }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {{ end }}
+              </section>
+        </div>
+
+        {{ partial "footer.html" . }}
+      </div>
+    </div>
+  </article>
+
+  {{ partial "scripts.html" . }}
+</body>
+
+</html>
+
